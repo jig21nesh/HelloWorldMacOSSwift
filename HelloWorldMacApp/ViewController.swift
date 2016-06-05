@@ -10,6 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var theHelloWorldLable: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,14 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func clickMeAction(sender: NSButton) {
+        if(theHelloWorldLable.stringValue == "Hello World!"){
+            theHelloWorldLable.stringValue  = "Test"
+        }else{
+            theHelloWorldLable.stringValue = "Hello World!"
+        }
+        
+    }
 
 }
 
